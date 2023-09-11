@@ -1,0 +1,15 @@
+name: 'Jira Ticket Status'
+description: 'Get the status of a Jira Ticket'
+icon: 'check-circle'
+color: 'blue'
+inputs:
+  ticket_id: # id of input
+    description: 'The ticket id. I.e. "CHEET-0000'
+    required: false
+  expected_status: # id of input
+    description: 'The expected status of the ticket. I.e. "In Review'
+    required: true
+    default: 'In Review'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
